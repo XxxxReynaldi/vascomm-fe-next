@@ -9,11 +9,23 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "aos": "^2.3.4",
+    "axios": "^1.2.2",
+    "classnames": "^2.3.2",
+    "js-cookie": "^3.0.1",
+    "jwt-decode": "^3.1.2",
     "next": "13.1.6",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-bootstrap": "^2.7.2",
+    "react-data-table-component": "^7.5.3",
+    "react-dom": "18.2.0",
+    "react-select": "^5.7.0",
+    "react-toastify": "^9.1.1",
+    "styled-components": "^5.3.6"
   },
   "devDependencies": {
+    "@types/node": "18.14.0",
+    "@types/react": "18.0.28",
     "eslint": "8.34.0",
     "eslint-config-next": "13.1.6"
   }
