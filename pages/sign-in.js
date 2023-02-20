@@ -1,8 +1,15 @@
+import { useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import SignInForm from '../components/organisms/SignInForm';
 
 export default function SignIn() {
+	useEffect(() => {
+		document.title = `Test | Halaman Login `;
+		return () => {
+			document.title = `Test Stack`;
+		};
+	});
 	return (
 		<section className='sign-in mx-auto'>
 			<div className='row'>

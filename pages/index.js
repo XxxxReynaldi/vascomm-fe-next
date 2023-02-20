@@ -18,6 +18,13 @@ export default function Home() {
 		AOS.init();
 	}, []);
 
+	useEffect(() => {
+		document.title = `Test | Home`;
+		return () => {
+			document.title = `Test Stack`;
+		};
+	});
+
 	return (
 		<>
 			<Navbar />

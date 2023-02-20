@@ -1,8 +1,6 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { toast } from 'react-toastify';
-import jwtDecode from 'jwt-decode';
-import axios from 'axios';
 
 import Link from 'next/link';
 import Input from '../../atoms/Input';
@@ -17,10 +15,6 @@ export default function SignUpForm() {
 		confPassword: '',
 		foto: 'default.jpg',
 	});
-	// const [name, setName] = useState('');
-	// const [email, setEmail] = useState('');
-	// const [password, setPassword] = useState('');
-	// const [confPassword, setConfPassword] = useState('');
 
 	const [image, setImage] = useState('');
 	const [imagePreview, setImagePreview] = useState(null);
@@ -61,16 +55,9 @@ export default function SignUpForm() {
 			setField(response.fields);
 		} else {
 			toast.success('Sign Up Success');
-			// router.push('/sign-up-photo');
+			router.push('/sign-in');
 		}
 	};
-
-	useEffect(() => {
-		document.title = `Test | Halaman Pendaftaran`;
-		return () => {
-			document.title = `Test Stack`;
-		};
-	});
 
 	return (
 		<>

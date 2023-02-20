@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { toast } from 'react-toastify';
 import jwtDecode from 'jwt-decode';
@@ -40,7 +40,7 @@ export default function SignInForm() {
 					router.push('/admin/customer');
 					break;
 				case 'customer':
-					router.push('/customer');
+					router.push('/');
 					break;
 				default:
 					break;
@@ -50,12 +50,6 @@ export default function SignInForm() {
 		}
 	};
 
-	useEffect(() => {
-		document.title = `Test | Halaman Login `;
-		return () => {
-			document.title = `Test Stack`;
-		};
-	});
 	return (
 		<>
 			<h2 className='text-4xl fw-bold color-palette-1 mb-10'>Sign In</h2>

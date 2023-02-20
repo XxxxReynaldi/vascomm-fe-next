@@ -26,7 +26,7 @@ export async function callAPI({ url, method, data, token, serverToken }) {
 			error: true,
 			message: response.data.msg,
 			fields: response.data.fields,
-			data: null,
+			data: response.data,
 		};
 		return res;
 	}

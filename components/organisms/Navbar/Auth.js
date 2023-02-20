@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import jwtDecode from 'jwt-decode';
 import Cookies from 'js-cookie';
+import axios from 'axios';
 
 const API_IMG = process.env.NEXT_PUBLIC_IMG;
 
@@ -13,23 +14,6 @@ export default function Auth() {
 		foto: '',
 	});
 	const router = useRouter();
-
-	// useEffect(() => {
-	// 	const token = Cookies.get('token');
-	// 	if (token) {
-	// 		const jwtToken = atob(token);
-	// 		const payload = jwtDecode(jwtToken);
-	// 		const userFromPayload = payload.player;
-	// 		setIsLogin(true);
-	// 		setUser(userFromPayload);
-	// 	}
-	// }, []);
-
-	const onLogout = () => {
-		Cookies.remove('token');
-		router.push('/');
-		setIsLogin(false);
-	};
 
 	if (isLogin) {
 		return (
@@ -68,7 +52,11 @@ export default function Auth() {
 	}
 	return (
 		<li className='nav-item my-auto'>
-			<Link href='/' className='btn btn-sign-in d-flex justify-content-center ms-lg-2 rounded-pill' role='button'>
+			<Link
+				href='/sign-in'
+				className='btn btn-sign-in d-flex justify-content-center ms-lg-2 rounded-pill'
+				role='button'
+			>
 				Sign In
 			</Link>
 		</li>
