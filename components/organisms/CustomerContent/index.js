@@ -14,44 +14,40 @@ export default function CustomerContent() {
 							<thead>
 								<tr className='color-palette-1'>
 									<th className='text-start' scope='col'>
-										Game
+										Nama
 									</th>
-									<th scope='col'>Item</th>
-									<th scope='col'>Price</th>
+									<th scope='col'>Email</th>
 									<th scope='col'>Status</th>
+									<th scope='col'>Opsi</th>
 								</tr>
 							</thead>
 							<tbody>
 								<TableRow
 									image='overview-1.png'
-									title='Mobile Legends: The New Battle 2021'
-									category='Desktop'
-									item={200}
-									price={290000}
+									title='User 1'
+									role='pelanggan'
+									email='user1@gmail.com'
 									status='Pending'
 								/>
 								<TableRow
 									image='overview-2.png'
-									title='Call of Duty:Modern'
-									category='Desktop'
-									item={550}
-									price={740000}
-									status='Success'
+									title='User 2'
+									role='pelanggan'
+									email='user2@gmail.com'
+									status='Active'
 								/>
 								<TableRow
 									image='overview-3.png'
-									title='Clash of Clans'
-									category='Mobile'
-									item={100}
-									price={120000}
-									status='Failed'
+									title='User 3'
+									role='pelanggan'
+									email='user3@gmail.com'
+									status='Inactive'
 								/>
 								<TableRow
 									image='overview-4.png'
-									title='The Royal Game'
-									category='Mobile'
-									item={225}
-									price={200000}
+									title='User 4'
+									role='pelanggan'
+									email='user4@gmail.com'
 									status='Pending'
 								/>
 							</tbody>

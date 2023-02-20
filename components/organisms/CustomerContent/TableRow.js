@@ -2,12 +2,12 @@ import cx from 'classnames';
 import Image from 'next/image';
 
 export default function TableRow(props) {
-	const { image, title, category, item, price, status } = props;
+	const { image, title, role, email, price, status } = props;
 	const classTitle = cx({
 		'float-start icon-status': true,
 		pending: status === 'Pending',
-		success: status === 'Success',
-		failed: status === 'Failed',
+		active: status === 'Active',
+		inactive: status === 'Inactive',
 	});
 
 	return (
@@ -27,14 +27,10 @@ export default function TableRow(props) {
 				</picture>
 				<div className='game-title-header'>
 					<p className='game-title fw-medium text-start color-palette-1 m-0'>{title}</p>
-					<p className='text-xs fw-normal text-start color-palette-2 m-0'>{category}</p>
 				</div>
 			</th>
 			<td>
-				<p className='fw-medium color-palette-1 m-0'>{item} Gold</p>
-			</td>
-			<td>
-				<p className='fw-medium text-start color-palette-1 m-0'>{price}</p>
+				<p className='fw-medium color-palette-1 m-0'>{email}</p>
 			</td>
 			<td>
 				<div>
@@ -44,6 +40,11 @@ export default function TableRow(props) {
 					<span className={classTitle}></span>
 					<p className='fw-medium text-start color-palette-1 m-0 position-relative'>{status}</p>
 				</div>
+			</td>
+			<td>
+				<button className='btn btn-warning text-sm text-white' role='button'>
+					<i className='fa-solid fa-pen'></i>
+				</button>
 			</td>
 		</tr>
 	);
